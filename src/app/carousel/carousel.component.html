@@ -1,0 +1,22 @@
+<ion-slides>
+    <ion-slide>
+        <div>
+            <img src="../../assets/img/gioconda.jpeg">
+        </div>
+    </ion-slide>
+    <ion-slide>
+        <div>
+            <img src="../../assets/img/vv.jpg">
+        </div>
+    </ion-slide>
+    <ion-slide>
+        <div>
+            <img src="../../assets/img/xx.jpg">
+        </div>
+    </ion-slide>
+</ion-slides>
+<ion-virtual-scroll [items]="">
+    <ion-item *virtualItem="let item">
+        {{ item }}
+    </ion-item>
+</ion-virtual-scroll>
