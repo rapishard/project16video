@@ -1,4 +1,6 @@
 export interface Movie {
+    searchData(value: any);
+    movies: Movie;
     id: string;
     title: string;
     popularity: number;

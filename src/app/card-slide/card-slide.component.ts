@@ -1,7 +1,8 @@
+import { Movie } from 'src/app/models/movies.model';
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { PrimeService } from '../services/prime.service';
 
-/* import { MbscScrollViewOptions } from '@mobiscroll/angular';
- */
 
 @Component({
   selector: 'app-card-slide',
@@ -11,8 +12,29 @@ import { Component, OnInit } from '@angular/core';
 export class CardSlideComponent implements OnInit {
 
 
-  constructor() { }
+  results: Movie[];
+  searchData = new FormControl('');
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  Movie: Movie;
+
+  constructor(private movie: PrimeService) { }
+
+  ngOnInit() { }
+
+  async allMovies() {
+    const response = await this.allMovies();
+    this.results=response.;
+
+  }
+
+  printValue() {
+    console.log(this.searchData);
+  }
+}
+
+/* 
+constructor() { }
 
   ngOnInit() {}
-
 }
+*/
