@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from '../models/user.model';
+import { PrimeService } from '../services/prime.service';
 
 @Component({
   selector: 'app-tab4',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab4Page implements OnInit {
 
-  constructor() { }
+  user: User = {} as User
 
-  ngOnInit() {
+  constructor(private service: PrimeService,private router: Router) { }
+
+  async ngOnInit() {
+    this.user = await this.service.personalInfo().then(response => response.user)
   }
+
+  logout(){
+    this.service.logout();
+    this.router.navigate(['/signin'])
+  }
+  
 
 }

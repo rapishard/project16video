@@ -4,6 +4,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content fullscreen>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>{{ user.id }}</ion-card-subtitle>
+      <ion-card-title>{{ user.username }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button color="danger" (click)="logout()">Logout</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

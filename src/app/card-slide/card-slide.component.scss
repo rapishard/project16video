@@ -1,0 +1,14 @@
+ion-card {
+    display: inline-block;
+    text-align: center;
+    max-height: 100%;
+}
+
+div {
+    background-color: lightblue;
+    border: 1px 1px solid black;
+    height: 80%;
+    width: 280px;
+    white-space: nowrap;
+    overflow: scroll;
+}
