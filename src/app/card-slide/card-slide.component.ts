@@ -19,12 +19,3 @@ export class CardSlideComponent implements OnInit {
     });
   }
 }
-
-}
-
-/* 
-constructor() { }
-
-  ngOnInit() {}
-}
-*/
