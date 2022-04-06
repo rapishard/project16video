@@ -1,8 +1,6 @@
-import { Movie } from 'src/app/models/movies.model';
+import { Movie, ResponseSpecificMovie } from 'src/app/models/movies.model';
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { PrimeService } from '../services/prime.service';
-
 
 @Component({
   selector: 'app-card-slide',
@@ -11,25 +9,17 @@ import { PrimeService } from '../services/prime.service';
 })
 export class CardSlideComponent implements OnInit {
 
+  movie: Movie = {} as Movie;
+  constructor(private PrimeService: PrimeService) { }
 
-  results: Movie[];
-  searchData = new FormControl('');
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  Movie: Movie;
-
-  constructor(private movie: PrimeService) { }
-
-  ngOnInit() { }
-
-  async allMovies() {
-    const response = await this.allMovies();
-    this.results=response.;
-
+  async ngOnInit() {
+    await this.PrimeService.specificMovie(10138).subscribe(response => {
+      let {movie} = response as ResponseSpecificMovie;
+      this.movie = movie;
+    });
   }
+}
 
-  printValue() {
-    console.log(this.searchData);
-  }
 }
 
 /* 

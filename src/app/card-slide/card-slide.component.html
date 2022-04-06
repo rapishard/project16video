@@ -4,7 +4,7 @@
     <ion-card>
         <ion-card-header>
             <ion-item href="https://www.google.com/" target="_blank" alt="prova">
-                <img src="https://image.tmdb.org/t/p/w500//5TYgKxYhnhRNNwqnRAKHkgfqi2G.jpg" alt="logoPg3">
+                <img [src]='movie?.poster_path' alt={{movie?.title}} />
             </ion-item>
         </ion-card-header>
     </ion-card>

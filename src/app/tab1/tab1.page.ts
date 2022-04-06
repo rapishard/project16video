@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PrimeService } from '../services/prime.service';
-
+/* import { PrimeService } from '../services/prime.service';
+ */
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -8,17 +8,17 @@ import { PrimeService } from '../services/prime.service';
 })
 export class Tab1Page {
 
-  movies: any[];
+  /* movies: any[];
   request: any;
-
-  constructor(private movie: PrimeService ){}
-
+ */
+  constructor(/* private movie: PrimeService */ ){}
+/*
   ionViewDidEnter(){
 
     this.movie.allMovies().then((data: any): void=>{
       this.movies = data.movies;
     });
-  }
+  } */
 
   }
 
